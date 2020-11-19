@@ -8,6 +8,8 @@ use Tribe\Project\Assets\Assets_Subscriber;
 use Tribe\Project\Blocks\Blocks_Definer;
 use Tribe\Project\Blocks\Blocks_Subscriber;
 use Tribe\Project\Cache\Cache_Subscriber;
+use Tribe\Project\Faceted_Filter\Faceted_Filter_Definer;
+use Tribe\Project\Faceted_Filter\Faceted_Filter_Subscriber;
 use Tribe\Project\Integrations\Google_Tag_Manager\Google_Tag_Manager_Subscriber;
 use Tribe\Project\Integrations\Gravity_Forms\Gravity_Forms_Subscriber;
 use Tribe\Project\Integrations\Yoast_SEO\Yoast_SEO_Subscriber;
@@ -45,6 +47,7 @@ class Core {
 		P2P_Definer::class,
 		Settings_Definer::class,
 		Theme_Definer::class,
+		Faceted_Filter_Definer::class,
 	];
 
 	/**
@@ -61,6 +64,7 @@ class Core {
 		Shortcodes_Subscriber::class,
 		Theme_Subscriber::class,
 		Yoast_SEO_Subscriber::class,
+		Faceted_Filter_Subscriber::class,
 
 		// our post types
 		Post_Types\Sample\Subscriber::class,
